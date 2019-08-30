@@ -6,6 +6,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Scanner;
+
+import com.bridgelabz.utility.Utility;
 
 
 public class BinarySearch {
@@ -32,6 +35,15 @@ public class BinarySearch {
 			{
 			System.out.println(strarr[i]);
 			}
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Enter Word to be found : ");
+			str=scanner.next();
+			int index;
+			index = Utility.binarySearch(strarr, str);
+			if(index==-1)
+				System.out.println("Not Found");
+			else
+				System.out.println("Element "+str+"Found at Index :"+index );
 		}
 			
 		

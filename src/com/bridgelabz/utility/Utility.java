@@ -112,4 +112,21 @@ public class Utility {
 		}
 	}
 	
+	public static int binarySearch(String[] strarr,String str)
+	{
+		int left =0,right=strarr.length-1,mid,result;
+		while(left <= right)
+		{
+			mid = left + (right- left)/2;
+			result = str.compareTo(strarr[mid]);
+			if(result == 0)
+				return mid;
+			if(result > 0)
+				left = mid +1;
+			else
+				right = mid - 1;
+		}
+		return -1;
+	}
+	
 }
